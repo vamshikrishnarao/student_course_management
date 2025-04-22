@@ -1,0 +1,79 @@
+body {
+  background     : linear-gradient(120deg, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  animation      : aurora 15s ease infinite;
+  color          : white;
+  font-family    : 'Segoe UI', sans-serif;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  height         : 100vh;
+  flex-direction : column;
+  margin         : 0;
+  padding        : 0;
+}
+
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size    : 2em;
+}
+
+form {
+  background     : rgba(255, 255, 255, 0.1);
+  padding        : 40px;
+  border-radius  : 20px;
+  backdrop-filter: blur(10px);
+  box-shadow     : 0 0 20px #1e88e5;
+  width          : 100%;
+  max-width      : 380px;
+  text-align     : center;
+}
+
+input, button {
+  width        : 100%;
+  padding      : 12px;
+  margin       : 10px 0;
+  border-radius: 10px;
+  border       : none;
+  outline      : none;
+  font-size    : 16px;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.2);
+  color           : #fff;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+button {
+  background : #90caf9;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #42a5f5;
+}
+
+a {
+  margin-top: 15px;
+  display: inline-block;
+  color: #90caf9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

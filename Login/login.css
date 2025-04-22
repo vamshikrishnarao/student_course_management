@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #0f0f1b;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+  }
+  
+  /* Neon cyberpunk border effect */
+  form {
+    position: relative;
+    width: 350px;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: #1b1b2f;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  form::before,
+  form::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      #ff00cc,
+      #3333ff,
+      #00ffee,
+      #ff00cc
+    );
+    animation: spin 6s linear infinite;
+    z-index: -1;
+    filter: blur(35px);
+    opacity: 0.6;
+    border-radius: 40%;
+  }
+  
+  form::after {
+    animation-direction: reverse;
+    opacity: 0.4;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Input fields */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #00ffee;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder {
+    color: #aaa;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #ff00cc;
+    box-shadow: 0 0 10px #ff00cc55;
+  }
+  
+  /* Submit button */
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ff00cc, #00ffee);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px #00ffeeaa;
+  }
+  
+  input[type="submit"]:hover {
+    box-shadow: 0 0 25px #ff00ccaa;
+    transform: scale(1.03);
+  }
+  
